@@ -9,21 +9,34 @@ html,body{
     height: 100vh;
 }
 .navbar{
-    background-color: rgb(213, 255, 230);
+    background-color: white;
     width: 100%;
-    height: 10%;
+    height: 15%;
     position: fixed;
     display: flex;
+    
 }
 .navbar img{
     display: inline-block;
+    width: 25%;
+    height: auto;
+    margin-left: 5%;
 }
 .navbar ul{
-    margin-top: 2%;
+    margin-top: 5%;
     text-align: right;
+    width: 100%;
 }
 .navbar li{
     display: inline-block;
-    font-size:1.2rem;
     margin-right: 2%;
+}
+.navbar li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+.navbar li a:hover{
+    background: blue;
+    color: black;
 }
