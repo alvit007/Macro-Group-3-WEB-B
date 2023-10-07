@@ -183,37 +183,33 @@ body {
   width: 100%;
 }
 
-/* Styling untuk slideshow container */
 .slideshow-container {
   position: relative;
   max-width: 80%;
   margin: auto;
-  overflow: hidden; /* Mengatur agar hanya 3 slide yang terlihat */
+  overflow: hidden;
   margin-top: 5%;
 }
 
-/* Styling untuk slide */
 .slide-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Animasi perpindahan slide */
+  transition: transform 0.5s ease-in-out;
   margin-top: 5%;
 }
 .slide-wrapper .slide h2{
     margin-top: 5%;
 } 
 .slide{
-  flex: 0 0 33.33%; /* 3 slide dalam satu baris */
+  flex: 0 0 33.33%;
   text-align: center;
 }
 
-/* Styling untuk gambar user */
 .user-image {
   max-width: 100px;
   max-height: 100px;
   border-radius: 50%;
 }
 
-/* Tombol untuk navigasi kiri dan kanan */
 .nav-buttons {
   top: 50%;
   transform: translateY(-50%);
