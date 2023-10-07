@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Slideshow</title>
+    <style>
+        /* Styling untuk slideshow container */
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden; /* Mengatur agar hanya 3 slide yang terlihat */
+        }
+
+        /* Styling untuk slide */
+        .slide-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Animasi perpindahan slide */
+        }
+
+        .slide {
+            flex: 0 0 33.33%; /* 3 slide dalam satu baris */
+            text-align: center;
+        }
+
+        /* Styling untuk gambar user */
+        .user-image {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
+        }
+
+        /* Tombol untuk navigasi kiri dan kanan */
+        .nav-buttons {
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            background: red;
+            justify-content: center;
+        }
+
+        .prev, .next {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .prev {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <div class="slide-wrapper">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img class="user-image" src="user1.jpg" alt="User 1">
+                <p>Komentar dari User 1</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img class="user-image" src="user2.jpg" alt="User 2">
+                <p>Komentar dari User 2</p>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img class="user-image" src="user3.jpg" alt="User 3">
+                <p>Komentar dari User 3</p>
+            </div>
+
+            <!-- Tambahkan slide lain sesuai kebutuhan -->
+        </div>
+        <!-- Tombol Navigasi -->
+        <div class="nav-buttons">
+            <button class="prev" onclick="plusSlides(-1)">Sebelumnya</button>
+            <button class="next" onclick="plusSlides(1)">Selanjutnya</button>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        const slides = document.querySelectorAll('.slide');
+        const slideWrapper = document.querySelector('.slide-wrapper');
+        const slideWidth = slides[0].clientWidth; // Lebar satu slide
+
+        // Fungsi untuk menampilkan slide berikutnya atau sebelumnya
+        function plusSlides(n) {
+            slideIndex += n;
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            } else if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            moveSlides();
+        }
+
+        // Fungsi untuk menggeser slide
+        function moveSlides() {
+            const translateX = -((slideIndex - 1) * slideWidth);
+            slideWrapper.style.transform = `translateX(${translateX}px)`;
+        }
+
+        // Tampilkan slide pertama saat halaman dimuat
+        moveSlides();
+    </script>
+</body>
+</html>

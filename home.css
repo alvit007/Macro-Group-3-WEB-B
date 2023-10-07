@@ -1,42 +1,297 @@
 *,
-html,body{
-    padding: 0;
-    margin: 0;
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
-.container{
-    background-color: rgb(235, 255, 243);
-    width: 100%;
-    height: 100vh;
+.wrapper {
+  width: 100%;
 }
-.navbar{
-    background-color: white;
-    width: 100%;
-    height: 15%;
-    position: fixed;
-    display: flex;
-    
+.container {
+  background-color: rgb(235, 255, 243);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar img{
-    display: inline-block;
-    width: 25%;
-    height: auto;
-    margin-left: 5%;
+.navbar {
+  background-color: white;
+  width: 100vw;
+  height: 15%;
+  position: fixed;
+  display: flex;
 }
-.navbar ul{
-    margin-top: 5%;
-    text-align: right;
-    width: 100%;
+.navbar img {
+  display: inline-block;
+  width: 25%;
+  height: auto;
+  margin-left: 5%;
 }
-.navbar li{
-    display: inline-block;
-    margin-right: 2%;
+.navbar ul {
+  margin-top: 5%;
+  text-align: right;
+  width: 100%;
+  margin-right: 5%;
 }
-.navbar li a{
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
+.navbar li {
+  display: inline-block;
+  margin-right: 2%;
 }
-.navbar li a:hover{
-    background: blue;
-    color: black;
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+.navbar li a:hover {
+  background: blue;
+  color: black;
+}
+.WelcomeHome {
+  display: inline-block;
+  margin-left: 2%;
+  margin-top: 8%;
+  width: 48%;
+  height: 70vh;
+}
+.WelcomeHome h1 {
+  font-size: 5rem;
+  padding-top: 20%;
+  text-align: center;
+}
+.konsultasi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(179, 255, 219);
+  margin-right: 2%;
+  margin-top: 8%;
+  width: 50%;
+  height: 70vh;
+  border-radius: 10%;
+  box-shadow: 0.5rem 0.5rem 1rem black;
+}
+.konsultasi .jadwal {
+  font-size: 1.5rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  padding-left: 5%;
+}
+.konsultasi .jadwal a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 2rem;
+  background-color: rgb(123, 158, 255);
+  margin-top: 15%;
+  color: white;
+  padding: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 10px;
+}
+.konsultasi .fotoKonsultasi {
+  margin-top: 10%;
+}
+.konsultasi .fotoKonsultasi img {
+  width: auto;
+  border-radius: 30%;
+}
+
+.sekilasTentang {
+  background-color: rgb(179, 255, 219);
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.kenapaHarus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.kenapaHarus .left-element {
+  width: 48%;
+  text-align: center;
+}
+.kenapaHarus .left-element ul {
+  margin-top: 2%;
+  list-style-type: disc;
+  text-align: left;
+  margin-left: 10%;
+}
+.kenapaHarus .right-element {
+  width: 48%;
+  text-align: center;
+}
+.kenapaHarus .right-element p {
+  margin-top: 2%;
+}
+.fitur {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(179, 255, 219);
+}
+.fitur .item {
+  background: white;
+  margin: 5vh;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  border-radius: 10%;
+}
+.fitur .item h2 {
+  margin-top: 5%;
+}
+.fitur .item .button {
+  margin-top: 5%;
+  display: inline-block;
+  background-color: rgb(179, 255, 219);
+  color: white;
+  text-decoration: none;
+  width: 50%;
+  padding: 2%;
+  box-shadow: 0.2rem 0.2rem grey;
+}
+.fitur .item .button a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.fitur .item p {
+  margin-top: 5%;
+}
+.fitur .item img {
+  width: 100%;
+}
+
+/* Styling untuk slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden; /* Mengatur agar hanya 3 slide yang terlihat */
+  margin-top: 5%;
+}
+
+/* Styling untuk slide */
+.slide-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Animasi perpindahan slide */
+}
+
+.slide {
+  flex: 0 0 33.33%; /* 3 slide dalam satu baris */
+  text-align: center;
+}
+
+/* Styling untuk gambar user */
+.user-image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50%;
+}
+
+/* Tombol untuk navigasi kiri dan kanan */
+.nav-buttons {
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background: red;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.prev,
+.next {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: 20px;
+}
+.tabelform {
+  text-align: center;
+  margin-top: 5%;
+}
+.form {
+  display: block;
+  margin-top: 2%;
+}
+/* Mengatur lebar input */
+input[type="text"],
+input[type="email"]{
+  width: 20%;
+  padding: 2%;
+  margin-bottom: 2%;
+  border: 1% solid #ccc;
+  border-radius: 1rem;
+}
+textarea {
+    width: 50%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 1% solid #ccc;
+    border-radius: 1rem;
+  }
+
+/* Mengatur ukuran tombol */
+input[type="submit"] {
+  text-align: center;
+  font-size: 1rem;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+/* Mengatur warna latar belakang saat input mendapatkan fokus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background-color: rgb(179, 255, 219);
+  outline: none;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: rgb(179, 255, 219);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .item {
+  margin: 5vh;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  text-align: left;
 }
