@@ -28,14 +28,28 @@
             <div class="konsultasi">
                 <div class="jadwal">
                     <h1>PILIH JADWAL</h1>
-                    <h2>Untuk Konsultasi</h2>
-                    <a href="#">Konsultasi</a>
+                    <h2 id="judul-konsultasi">Untuk Konsultasi</h2>
+                    <a href="#" id="btn-konsultasi">Konsultasi</a>
                 </div>
                 <div class="fotoKonsultasi">
                     <img src="Doctor-PNG-Clipart 1.png">
                 </div>
             </div>
+            
         </div>
+        <div id="chat-popup" class="chat-popup">
+            <div class="chat-header">
+                <div id="chat-title"></div>
+                <span id="close-chat" class="close-chat">x</span>
+            </div>
+            
+            <div class="chat-content">
+                <div class="chat-messages" id="chat-messages"></div>
+                <input type="text" id="user-input" placeholder="Tulis pesan...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+        
         <div class="sekilasTentang">
             <h2>Sekilas Tentang Kami</h2>
             <p>
@@ -84,26 +98,45 @@
             </div>
         </div> 
         <div class="slideshow-container">
+            <h1 style="text-align: center;">Customer Reviews</h1>
             <div class="slide-wrapper">
                 <div class="slide">
-                    <img class="user-image" src="user1.jpg" alt="User 1">
-                    <p>Komentar dari User 1</p>
+                    <img class="user-image" src="Ellipse 7.png" alt="User 1">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
                 </div>
     
                 <div class="slide">
-                    <img class="user-image" src="user2.jpg" alt="User 2">
-                    <p>Komentar dari User 2</p>
+                    <img class="user-image" src="Ellipse 8.png" alt="User 2">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
                 </div>
     
                 <div class="slide">
-                    <img class="user-image" src="user3.jpg" alt="User 3">
-                    <p>Komentar dari User 3</p>
+                    <img class="user-image" src="Ellipse 9.png" alt="User 3">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
                 </div>
-
+                <div class="slide">
+                    <img class="user-image" src="Ellipse 7.png" alt="User 1">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
+                </div>
+                <div class="slide">
+                    <img class="user-image" src="Ellipse 8.png" alt="User 2">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
+                </div>
+    
+                <div class="slide">
+                    <img class="user-image" src="Ellipse 9.png" alt="User 3">
+                    <h2>Adityo Khori Ramadhan</h2>
+                    <p>Aplikasi ini sangat bagus untuk orang yang menginginkan program diet sehat. Sehingga diet kita menjadi lebih efektif dan kemungkinan berhasilnya tinggi</p>
+                </div>
             </div>
             <div class="nav-buttons">
-                <button class="prev" onclick="plusSlides(-1)">Sebelumnya</button>
-                <button class="next" onclick="plusSlides(1)">Selanjutnya</button>
+                <button class="prev" onclick="plusSlides(-1)">Prev</button>
+                <button class="next" onclick="plusSlides(1)">Next</button>
             </div>
         </div>
         <div class="tabelform">
