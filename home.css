@@ -7,6 +7,9 @@ body {
 .wrapper {
   width: 100%;
 }
+html{
+  scroll-behavior: smooth;
+}
 .container {
   background-color: rgb(235, 255, 243);
   width: 100%;
@@ -196,10 +199,10 @@ body {
   transition: transform 0.5s ease-in-out;
   margin-top: 5%;
 }
-.slide-wrapper .slide h2{
-    margin-top: 5%;
-} 
-.slide{
+.slide-wrapper .slide h2 {
+  margin-top: 5%;
+}
+.slide {
   flex: 0 0 33.33%;
   text-align: center;
 }
@@ -239,7 +242,7 @@ body {
 }
 /* Mengatur lebar input */
 input[type="text"],
-input[type="email"]{
+input[type="email"] {
   width: 20%;
   padding: 2%;
   margin-bottom: 2%;
@@ -248,13 +251,13 @@ input[type="email"]{
   font-size: 1.2rem;
 }
 textarea {
-    width: 50%;
-    padding: 2%;
-    margin-bottom: 2%;
-    border: 1% solid #ccc;
-    border-radius: 1rem;
-    font-size: 1rem;
-  }
+  width: 50%;
+  padding: 2%;
+  margin-bottom: 2%;
+  border: 1% solid #ccc;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
 
 /* Mengatur ukuran tombol */
 input[type="submit"] {
@@ -265,7 +268,7 @@ input[type="submit"] {
   padding-top: 0.5%;
   padding-bottom: 0.5%;
 
-  background-color:rgb(179, 255, 219);
+  background-color: rgb(179, 255, 219);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -317,7 +320,7 @@ textarea:focus {
   justify-content: space-between;
   align-items: center;
 }
-#chat-tittle{
+#chat-tittle {
   margin: 0;
 }
 .close-chat {
@@ -363,12 +366,12 @@ textarea:focus {
 
 .user-message {
   align-self: flex-end;
-  background-color: #DCF8C6;
+  background-color: #dcf8c6;
 }
 
 .bot-message {
   align-self: flex-start;
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
 }
 
 .timestamp {
@@ -377,3 +380,4 @@ textarea:focus {
   align-self: flex-end;
   margin-top: 1%;
 }
+
