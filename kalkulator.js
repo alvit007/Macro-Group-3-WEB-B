@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (targetId) {
     scrollToElement(targetId);
   }
-  
+
 });
 
 
