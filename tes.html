@@ -3,112 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Slideshow</title>
+    <title>Kalkulator Kalori</title>
     <style>
-        /* Styling untuk slideshow container */
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-            overflow: hidden; /* Mengatur agar hanya 3 slide yang terlihat */
-        }
-
-        /* Styling untuk slide */
-        .slide-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out; /* Animasi perpindahan slide */
-        }
-
-        .slide {
-            flex: 0 0 33.33%; /* 3 slide dalam satu baris */
-            text-align: center;
-        }
-
-        /* Styling untuk gambar user */
-        .user-image {
-            max-width: 100px;
-            max-height: 100px;
-            border-radius: 50%;
-        }
-
-        /* Tombol untuk navigasi kiri dan kanan */
-        .nav-buttons {
+        /* CSS untuk popup window */
+        #popup {
+            display: none;
+            position: fixed;
             top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            background: red;
-            justify-content: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
-
-        .prev, .next {
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
+        #closeBtn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
             cursor: pointer;
-        }
-
-        .prev {
-            margin-right: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="slideshow-container">
-        <div class="slide-wrapper">
-            <!-- Slide 1 -->
-            <div class="slide">
-                <img class="user-image" src="user1.jpg" alt="User 1">
-                <p>Komentar dari User 1</p>
+    <form id="kalkulatorForm">
+            <h3>Apa jenis kelamin anda?</h3>
+            <div class="gender-selection">
+                <input type="radio" id="pria" name="jenisKelamin" value="pria">
+                <label for="pria">Pria</label>
+                <input type="radio" id="wanita" name="jenisKelamin" value="wanita">
+                <label for="wanita">Wanita</label>
             </div>
-
-            <!-- Slide 2 -->
-            <div class="slide">
-                <img class="user-image" src="user2.jpg" alt="User 2">
-                <p>Komentar dari User 2</p>
+            <h3>Berapa usia anda?</h3>
+            <div>
+                <input type="number" id="usia" name="usia" required>
             </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-                <img class="user-image" src="user3.jpg" alt="User 3">
-                <p>Komentar dari User 3</p>
+            <h3>Berapa tinggi badan anda?</h3>
+            <div>
+                <input type="number" id="tinggiBadan" name="tinggiBadan" required>
             </div>
+            <h3>Berapa berat badan anda?</h3>
+            <div>
+                <input type="number" id="beratBadan" name="beratBadan" required>
+            </div>
+            <h3>Pilih aktivitas harian anda:</h3>
+            <div>
+                <select id="aktivitas" name="aktivitas" required>
+                    <option value="ringan">Aktivitas ringan, Olahraga 1-3 kali/minggu</option>
+                    <option value="sedang">Aktivitas menengah, olahraga 3-5 kali/minggu</option>
+                    <option value="berat">Aktivitas berat, olahraga 6-7 kali/minggu</option>
+                    <option value="ekstrim">Pekerja fisik, olahraga 2 kali/hari</option>
 
-            <!-- Tambahkan slide lain sesuai kebutuhan -->
-        </div>
-        <!-- Tombol Navigasi -->
-        <div class="nav-buttons">
-            <button class="prev" onclick="plusSlides(-1)">Sebelumnya</button>
-            <button class="next" onclick="plusSlides(1)">Selanjutnya</button>
-        </div>
+                </select>
+            </div>
+        <button type="submit">Hitung</button>
+        <button type="reset">Reset</button>
+    </form>
+    <div id="hasil"></div>
+
+    <!-- Popup window -->
+    <div id="popup">
+        <span id="closeBtn">X</span>
+        <h2>Hasil Perhitungan Kalori:</h2>
+        <p id="kaloriResult"></p>
     </div>
 
     <script>
-        let slideIndex = 1;
-        const slides = document.querySelectorAll('.slide');
-        const slideWrapper = document.querySelector('.slide-wrapper');
-        const slideWidth = slides[0].clientWidth; // Lebar satu slide
+        // JavaScript untuk menghitung kalori
+        document.getElementById("kalkulatorForm").addEventListener("submit", function(e) {
+            e.preventDefault();
 
-        // Fungsi untuk menampilkan slide berikutnya atau sebelumnya
-        function plusSlides(n) {
-            slideIndex += n;
-            if (slideIndex < 1) {
-                slideIndex = slides.length;
-            } else if (slideIndex > slides.length) {
-                slideIndex = 1;
+            // Mengambil nilai input dari formulir
+            const usia = parseInt(document.getElementById("usia").value);
+            const tinggiBadan = parseInt(document.getElementById("tinggiBadan").value);
+            const beratBadan = parseInt(document.getElementById("beratBadan").value);
+            const aktivitas = document.getElementById("aktivitas").value;
+            const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked').value;
+
+            // Melakukan perhitungan kalori berdasarkan rumus Mifflin St. Jeor
+            let kalori = 0;
+            if (jenisKelamin === "pria") {
+                kalori = 10 * beratBadan + 6.25 * tinggiBadan - 5 * usia + 5;
+            } else if (jenisKelamin === "wanita") {
+                kalori = 10 * beratBadan + 6.25 * tinggiBadan - 5 * usia - 161;
             }
-            moveSlides();
-        }
 
-        // Fungsi untuk menggeser slide
-        function moveSlides() {
-            const translateX = -((slideIndex - 1) * slideWidth);
-            slideWrapper.style.transform = `translateX(${translateX}px)`;
-        }
+            // Menghitung kalori berdasarkan aktivitas
+            switch (aktivitas) {
+                case "ringan":
+                    kalori *= 1.2;
+                    break;
+                case "sedang":
+                    kalori *= 1.55;
+                    break;
+                case "berat":
+                    kalori *= 1.725;
+                    break;
+                case "ekstrim":
+                    kalori *= 1.9;
+                    break;
+            }
 
-        // Tampilkan slide pertama saat halaman dimuat
-        moveSlides();
+            // Menampilkan hasil di popup
+            const popup = document.getElementById("popup");
+            const kaloriResult = document.getElementById("kaloriResult");
+            kaloriResult.textContent = "Anda membutuhkan " + kalori.toFixed(2) + " kalori per hari.";
+            popup.style.display = "block";
+
+            // Menutup popup saat tombol exit diklik
+            const closeBtn = document.getElementById("closeBtn");
+            closeBtn.addEventListener("click", function() {
+                popup.style.display = "none";
+            });
+        });
     </script>
 </body>
 </html>

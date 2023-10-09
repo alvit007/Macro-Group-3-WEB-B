@@ -1,0 +1,111 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navbar {
+  background-color: white;
+  width: 100vw;
+  height: 15%;
+  position: fixed;
+  display: flex;
+  z-index: 1000;
+  top: 0;
+}
+.navbar img {
+  display: inline-block;
+  width: 25%;
+  height: auto;
+  margin-left: 5%;
+}
+.navbar ul {
+  margin-top: 5%;
+  text-align: right;
+  width: 100%;
+  margin-right: 5%;
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 2%;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+.navbar li a:hover {
+  background: lightblue;
+  padding: 5%;
+  color: white;
+}
+.footer {
+  color: rgb(68, 68, 68);
+  width: 100%;
+  height: auto;
+  background-color: rgb(179, 255, 219);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .item {
+  margin: 5vh;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  text-align: left;
+}
+.awalMateri{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.awal-left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.awal-left img{
+  width: 70%;
+  height: 50%;
+}
+.awal-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(43, 163, 107);
+    font-size: 1.5rem;
+    width: 50%;
+}
+
+.container-5o5m {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30vh;
+  background-color: yellow;
+}
+
+.isi-5o5m {
+  width: 30%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(43, 163, 107);
+  border-radius: 2rem;
+  margin: auto;
+  margin-top: 0;
+}

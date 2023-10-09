@@ -1,0 +1,213 @@
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navbar {
+  background-color: white;
+  width: 100vw;
+  height: 15%;
+  position: fixed;
+  display: flex;
+  z-index: 1000;
+  top: 0;
+}
+.navbar img {
+  display: inline-block;
+  width: 25%;
+  height: auto;
+  margin-left: 5%;
+}
+.navbar ul {
+  margin-top: 5%;
+  text-align: right;
+  width: 100%;
+  margin-right: 5%;
+}
+.navbar li {
+  display: inline-block;
+  margin-right: 2%;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+.navbar li a:hover {
+  background: lightblue;
+  padding: 5%;
+  color: white;
+}
+.footer {
+  color: rgb(68, 68, 68);
+  width: 100%;
+  height: auto;
+  background-color: rgb(179, 255, 219);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer .item {
+  margin: 5vh;
+  width: 30%;
+  height: auto;
+  text-align: center;
+  padding: 2%;
+  text-align: left;
+}
+.imgKalkulator {
+
+  background-image: url("kkalori 1.png"); /* Ganti 'background.jpg' dengan URL gambar latar belakang Anda */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.imgKalkulator .isiImage {
+  color: white;
+  padding-top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.isiImage h2{
+  font-size: 2.2rem;
+}
+.isiImage p{
+  opacity: 80%;
+  font-size: 1.5rem;
+  padding-top: 2%;
+}
+.isiImage a{
+  margin-top: 5%;
+}
+.tombolBawah img{
+  animation: kedip 2s infinite;
+}
+
+@keyframes kedip {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+.tombolBawah{
+  display: flex;
+  flex-direction: column;
+}
+.kalkulator {
+  padding-top: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.item {
+  flex: 1;
+  padding: 5%;
+  
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 1.2rem;
+}
+.left h3{
+  margin-bottom: 5%;
+}
+.right {
+  margin-left: 2%;
+  font-size: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 2%;
+  margin-bottom: 5%;
+  border: 1px solid #ccc;
+  background: rgb(179, 255, 219);;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 2% 3%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.gender-selection {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+input[type="radio"] {
+  margin-right: 10%;
+}
+.rumus{
+  margin-top: 2%;
+  background-color: rgb(179, 255, 219);
+  padding: 2%;
+  border-radius: 1rem;
+}
+.right ul{
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.right ul li{
+  list-style: disc;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(223, 223, 223);
+  border-style: dashed;
+  padding: 8%;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  font-size: 1.2rem;
+}
+
+.close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+}
