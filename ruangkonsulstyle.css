@@ -1,0 +1,189 @@
+*,html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Inter'
+}
+
+/* ========================= Header-NAVBAR ========================= */
+header{
+    background: #FFFFFF;
+    color: #222;
+    font-family: 'Inter',sans-serif; font-size: 20px; 
+    font-style: normal;font-weight: 700;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.logo{
+    margin-right: auto;
+    display: flex;
+    padding-left: 20px;
+}
+
+
+.logo-img{
+    width: 120px;
+    height: 120px;
+}
+
+nav ul{
+    display: flex;
+    padding-right: 20%;
+}
+
+li{
+    list-style-type:none ;
+    padding: 10px;
+}
+
+li a{
+    transition: all.5s ease 0s;
+    display: inline-block;
+}
+
+li a:hover{
+    color: #F16B4E;
+}
+
+a{
+    color: #222;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 812px) { /* jadi kecil 33% */
+    header{font-size: 13px; 
+        height: 100px;
+    }
+    
+    .logo{
+        padding-left: 5px;
+    }
+
+    .logo-img{
+        width: 80px; /* Sesuaikan ukuran logo untuk tampilan mobile */
+        height: 80px;
+    }
+
+    nav {
+        padding-top: 10px; 
+    }
+
+    a{
+        margin: 0 10px;
+    }
+}
+/* ========================= Header-NAVBAR ========================= */
+
+
+.second-header{
+    color: rgba(4, 86, 12, 0.78);
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+.second-header-bottom-element{
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+}
+
+.second-header-left-text{
+    color: #000000;
+}
+
+.second-header-center-text{
+    font-size: 14px;
+    font-weight: 1000;
+    color: #000000;
+    margin: 0 8px;
+}
+
+.chatdokter{
+    display: flex;
+    text-align: left;
+    background-color: #B4E5C8;
+    color: #000;
+    font-family: 'Inter',sans-serif;
+}
+
+.cd-left-element,.cd-right-element {
+    flex: 1;
+}
+
+.tittle-cd{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 30px 60px;
+}
+
+.text-cd{
+    font-weight: 200;
+    margin: 30px 60px;
+}
+
+.img-cd1{
+    padding-left: 80px;
+}
+
+.dokter{
+    display: flex;
+    flex: 1;
+    padding: 30px;
+}
+
+.img-dr{
+    margin: 0 20px;
+}
+
+.namadr{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.experiencedr{
+    display: flex;
+    flex: 1;
+    padding: 20px 0;
+}
+
+.experiencedr p{
+    padding: 0 12px;
+}
+
+.img-thumbup{
+    padding-right: 10px;
+}
+
+.harga{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.bt-chat{
+    font-size: 24px;
+    padding: 12px 40px;
+}
