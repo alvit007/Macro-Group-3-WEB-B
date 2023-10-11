@@ -1,78 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
-    <style>
-        /* CSS untuk overlay */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* CSS untuk video container */
-        .video-container {
-            position: relative;
-            width: 100%; /* Mengisi seluruh lebar layar */
-            max-width: 800px;
-            text-align: center; /* Menengahkan konten */
-        }
-
-        /* Tombol untuk menutup video */
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 24px;
-            color: #fff;
-        }
-
-        /* IFrame video YouTube */
-        iframe {
-            width: 100%;
-            height: 400px;
-        }
-    </style>
+    <title>Daftar Buku</title>
 </head>
 <body>
-    <h1>
-        <a href="#" id="open-video">Buka Video</a>
-    </h1>
-
-    <div class="overlay" id="video-overlay">
-        <div class="video-container">
-            <span class="close-button" id="close-video">&#10006;</span>
-            <iframe
-                src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0" 
-                frameborder="0"
-                allow="autoplay=0" 
-                allowfullscreen
-            ></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Fungsi untuk membuka video
-        document.getElementById("open-video").addEventListener("click", function(e) {
-            e.preventDefault(); // Mencegah perilaku default dari tautan
-            document.getElementById("video-overlay").style.display = "flex"; // Mengubah display ke "flex"
-        });
-
-        // Fungsi untuk menutup video
-        document.getElementById("close-video").addEventListener("click", function() {
-            document.getElementById("video-overlay").style.display = "none";
-        });
-    </script>
+    <h1>Daftar Buku</h1>
+    <ul id="bookList">
+        <li>
+            <img src="Rectangle 64.png" alt="Buku 1">
+            <a href="book_details.html?bookId=1">Lihat Detail</a>
+        </li>
+        <li>
+            <img src="buku2.jpg" alt="Buku 2">
+            <a href="book_details.html?bookId=2">Lihat Detail</a>
+        </li>
+        <!-- Tambahkan buku-buku lainnya sesuai kebutuhan -->
+    </ul>
 </body>
 </html>

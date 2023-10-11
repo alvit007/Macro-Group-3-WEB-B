@@ -171,6 +171,7 @@ button:hover {
 .gender-selection {
   display: flex;
   justify-content: space-between;
+  width: calc(80% - 10%);
 
 }
 

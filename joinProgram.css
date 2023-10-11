@@ -111,16 +111,14 @@ html {
       opacity: 1;
   }
 }
-.tombolBawah{
-  background-color: yellow;
-}
+
 .isi-5o5m {
   width: 30%;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(43, 163, 107);
+  background-color: rgb(78, 194, 140);
   border-radius: 2rem;
   margin: auto;
 }
@@ -131,7 +129,12 @@ html {
   justify-content: center;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
+  border-bottom: .1rem solid black;
 }
+#right-content img{
+  width: 8%;
+}
+
 .isi-5o5m-kiri{
   width: 100%;
   height: 100%;
@@ -174,16 +177,18 @@ html {
 }
 .isiContent {
   width: 100%;
-  height: 20%;
-  background-color: aliceblue;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 10px solid white;
+  padding: 2%;
+  border-bottom: .1rem solid black;
 }
 .isiContent a{
   text-decoration: none;
-  color: black;
+  color: rgb(255, 102, 75);
+}
+.isiContent img{
+  width: 10%;
 }
 .deksContent {
   font-size: 1.2rem;
@@ -192,6 +197,26 @@ html {
 }
 .deksContent h2 {
   padding-bottom: 2%;
+}
+.rekomBuku {
+  margin: 2%;
+}
+.rekomBuku ul{
+  display: flex;
+  justify-content: center;
+}
+.rekomBuku ul li{
+  padding-right: 5%;
+  list-style: none;
+  padding-top: 5%;
+}
+.rekomBuku h2{
+  padding-left: 5%;
+}
+.rekomBuku h4{
+  padding-top: 2%;
+  text-align: right;
+  padding-right: 5%;
 }
 .isiContentYT {
   display: flex;

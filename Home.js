@@ -96,22 +96,3 @@ userInput.addEventListener("keydown", (event) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Fungsi untuk menangani klik pada navbar
-  function scrollToElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  // Menangani klik pada setiap item navbar
-  const navbarItems = document.querySelectorAll(".navbar a");
-  navbarItems.forEach(function (item) {
-    item.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = item.getAttribute("href").substring(1);
-      scrollToElement(targetId);
-    });
-  });
-});
