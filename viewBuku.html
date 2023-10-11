@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator Kalori</title>
+        <link rel="stylesheet" href="viewBuku.css">
+    </head>
+    <body id="top">  
+        <div class="navbar">
+            <img src="Rectangle 62.png">
+            <ul>
+                <li><a href="home.html#top">Home</a></li>
+                <li><a href="home.html#sekilasTentang">About</a></li>
+                <li><a href="home.html#fitur">Feature</a></li>
+                <li><a href="home.html#testi">Testimonial</a></li>
+                <li><a href="home.html#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <div id="bookDetails">
+        </div>
+        <div class="rekomBuku">
+            <h2>Rekomendasi Buku Diet Sehat</h2>
+            <ul>
+                <li><a href="viewBuku.html?bookId=1"><img src="Rectangle 64.png" > </a></li>
+                <li><a href="viewBuku.html?bookId=2"><img src="Rectangle 65.png"></a></li>
+                <li><a href="viewBuku.html?bookId=3"><img src="Rectangle 66.png"></a></li>
+                <li><a href="viewBuku.html?bookId=4"><img src="Rectangle 67.png"></a></li>
+            </ul>
+            <a href="daftarBuku.html"><h4>See more..</h4></a>
+        </div>
+        <div class="footer">
+            <div class="item">
+                <h2>Website Program Diet</h2>
+                <p>Kami adalah penyedia informasi maupun konsultasi kesehatan medis. Platform kami sudah banyak konsumen yang memakai di seluruh Indonesia.</p>
+                <h3 style="margin-top: 5%;">Panduan informasi</h3>
+                <ul>Bantuan</ul>
+                <ul>Kebijakan Privasi</ul>
+                <ul>Syarat & Ketentuan</ul>
+                <ul>FAQ's</ul>
+
+            </div>
+            <div class="item">
+                <h2>Kontak Kami</h2>
+                <ul>
+                    <li>Alamat :<p>Jalan Peta No 17, Bandung, Jawa Barat, Indonesia</p></li>
+                    <li>Email :<p>macrobb@gmail.com</p></li>
+                    <li>Hotline :<p>+628-175-150-235</p></li>
+                </ul>
+            </div>
+            <div class="item">
+                <!-- <h2>Join Program Diet</h2>
+                <p>Ikuti program unggulan kami dengan dilengkapi beberapa fitur penunjang keberhasilannya</p> -->
+            </div>
+        </div>
+             
+    </body>
+    <script>
+        // Ambil parameter bookId dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookId = urlParams.get('bookId');
+
+        // Simpan data buku dalam objek
+        const books = {
+            1: {
+                image: "Rectangle 64.png",
+                title: "Buku 1",
+                description: 
+                `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+  Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+            },
+            2: {
+                image: "Rectangle 65.png",
+                title: "Buku 2",
+                description: "Deskripsi Buku 2."
+            },
+            3: {
+                image: "Rectangle 66.png",
+                title: "Buku 3",
+                description: "Deskripsi Buku 3."
+            }
+            // Tambahkan buku-buku lainnya sesuai kebutuhan
+        };
+
+        // Tampilkan deskripsi buku yang sesuai
+        const book = books[bookId];
+        if (book) {
+            const bookDetails = document.getElementById("bookDetails");
+            bookDetails.innerHTML = `
+                <img src="${book.image}" alt="${book.title}">
+                <h2>${book.title}</h2>
+                <div class="deksripsi">
+                    <h3>Deksripsi:</h3>
+                    <p>${book.description}</p>
+                </div>
+
+            `;
+        } else {
+            // Tampilkan pesan jika buku tidak ditemukan
+            const bookDetails = document.getElementById("bookDetails");
+            bookDetails.innerHTML = "<p>Buku tidak ditemukan.</p>";
+        }
+    </script>
+</html>

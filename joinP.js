@@ -1,18 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function scrollToElement(elementId) {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  
-    // Gulingkan ke elemen dengan ID yang sesuai saat halaman dimuat
-    const targetId = window.location.hash.substring(1);
-    if (targetId) {
-      scrollToElement(targetId);
-    }
-  
-  });
+
   
   function showLeftContent() {
     const leftContent = document.getElementById('left-content');

@@ -15,8 +15,10 @@ function hitungKalori() {
   }
 
   // Tambahkan faktor aktivitas
-  if (aktivitas === "ringan") {
-      kalori *= 1.2;
+  if (aktivitas === "minimal") {
+      kalori *= 1.22;
+  } else if(aktivitas == "ringan"){
+      kalori *= 1.375;
   } else if (aktivitas === "sedang") {
       kalori *= 1.55;
   } else if (aktivitas === "berat") {
@@ -35,25 +37,5 @@ function closePopup() {
   document.getElementById("hasil").style.display = "none";
 }
 
-document.getElementById("kalkulatorForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  hitungKalori();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  function scrollToElement(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  }
-
-  // Gulingkan ke elemen dengan ID yang sesuai saat halaman dimuat
-  const targetId = window.location.hash.substring(1);
-  if (targetId) {
-    scrollToElement(targetId);
-  }
-
-});
 
 
