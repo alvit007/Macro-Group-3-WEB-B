@@ -27,7 +27,6 @@ function hitungKalori() {
       kalori *= 1.9;
   }
 
-
   var hasilPopup = document.getElementById("hasilKalori");
   hasilPopup.textContent = "Anda memerlukan sekitar " + kalori.toFixed(2) + " kalori per hari.";
   document.getElementById("hasil").style.display = "block";
@@ -37,5 +36,10 @@ function closePopup() {
   document.getElementById("hasil").style.display = "none";
 }
 
+document.getElementById("kalkulatorForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    hitungKalori();
+  });
+  
 
 

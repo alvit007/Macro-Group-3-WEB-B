@@ -11,43 +11,87 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.navbar {
-  background-color: white;
-  width: 100vw;
-  height: 15%;
+/* ========================= Header-NAVBAR ========================= */
+header{
   position: fixed;
+  background: #FFFFFF;
+  color: #222;
+  font-family: 'Inter',sans-serif; font-size: 20px; 
+  font-style: normal;font-weight: 700;
   display: flex;
-  z-index: 1000;
-  top: 0;
-}
-.navbar img {
-  display: inline-block;
-  width: 25%;
-  height: auto;
-  margin-left: 5%;
-}
-.navbar ul {
-  margin-top: 5%;
-  text-align: right;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-right: 5%;
+  height: 20%;
+  margin: 0 auto;
+  z-index: 1000;
 }
-.navbar li {
+
+.logo{
+  margin-right: auto;
+  display: flex;
+  padding-left: 20px;
+}
+
+
+.logo-img{
+  width: 120px;
+  height: 120px;
+}
+
+nav ul{
+  display: flex;
+  padding-right: 20%;
+}
+
+nav li{
+  list-style-type:none;
+  padding: 10px;
+}
+
+li a{
+  transition: all.5s ease 0s;
   display: inline-block;
-  margin-right: 2%;
 }
-.navbar li a {
+
+li a:hover{
+  color: #F16B4E;
+}
+
+a{
+  color: #222;
   text-decoration: none;
-  color: black;
-  font-size: 1.5rem;
+  margin: 0 20px;
 }
-.navbar li a:hover {
-  background: lightblue;
-  padding: 5%;
-  color: white;
+
+@media screen and (max-width: 812px) { /* jadi kecil 33% */
+  header{font-size: 13px; 
+      height: 100px;
+  }
+  
+  .logo{
+      padding-left: 5px;
+  }
+
+  .logo-img{
+      width: 80px; /* Sesuaikan ukuran logo untuk tampilan mobile */
+      height: 80px;
+  }
+
+  nav {
+      padding-top: 10px; 
+  }
+
+  a{
+      margin: 0 10px;
+  }
 }
+/* ========================= Header-NAVBAR ========================= */
+/* ========================= FOOTER ========================= */
 .footer {
-  color: rgb(68, 68, 68);
+  color: #525252;
+  font-family: 'Open Sans';
   width: 100%;
   height: auto;
   background-color: rgb(179, 255, 219);
@@ -55,6 +99,35 @@ html {
   flex-direction: row;
   justify-content: center;
 }
+.footer h2{
+  font-weight: 1000;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+}
+
+.footer ul{
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer li{
+  font-size: 18px;
+  list-style-type:none;
+  padding-bottom: 15px;
+}
+
+.footer p{
+  font-size: 14px;
+  text-align: justify;
+}
+
+.footer ul li p{
+  font-size: 14px;
+  padding-left: 23px;
+  padding-top: 1%;
+}
+
 .footer .item {
   margin: 5vh;
   width: 30%;
@@ -63,9 +136,22 @@ html {
   padding: 2%;
   text-align: left;
 }
+
+.third-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.logo-ikuti{
+  margin: 4% 0;
+  margin-right: 6%;
+  flex-direction: row;
+  
+}
+/* ========================= FOOTER ========================= */
 .garisAtas{
-    background-color: rgb(212, 255, 241);
-    margin-top: 8%;
     display: flex;
     justify-content: center;
     align-items: center;

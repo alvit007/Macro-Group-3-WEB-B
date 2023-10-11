@@ -14,8 +14,10 @@ body{
 }
 
 /* ========================= Header-NAVBAR ========================= */
-header{
+
+header nav{
     background: #FFFFFF;
+    position: fixed;
     color: #222;
     font-family: 'Inter',sans-serif; font-size: 20px; 
     font-style: normal;font-weight: 700;
@@ -23,10 +25,10 @@ header{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 1200px;
     width: 100%;
-    height: 150px;
+    height: 20%;
     margin: 0 auto;
+    z-index: 1000;
 }
 
 .logo{
@@ -43,7 +45,6 @@ header{
 
 nav ul{
     display: flex;
-    padding-right: 20%;
 }
 
 nav li{
@@ -131,6 +132,100 @@ a{
     flex: 1;
 }
 
+  /* Mengatur lebar input */
+  input[type="text"],
+  input[type="email"] {
+    width: 20%;
+    padding: 2%;
+    margin-bottom: 2%;
+    border: 1% solid #ccc;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    
+  }
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 30%;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #chat-tittle {
+    margin: 0;
+  }
+  .close-chat {
+    cursor: pointer;
+  }
+  
+  .chat-content {
+    padding: 2%;
+  }
+  
+  .chat-messages {
+    height: 50vh;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #user-input {
+    width: 70%;
+    margin-top: 2%;
+    border: 1px solid #ccc;
+    border-radius: 2%;
+  }
+  
+  #send-button {
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 2% 3%;
+    cursor: pointer;
+  }
+  .message {
+    max-width: 70%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+  }
+  
+  .bot-message {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+  }
+  
+  .timestamp {
+    font-size: 0.6rem;
+    color: #777;
+    align-self: flex-end;
+    margin-top: 1%;
+  }
+  input[type="text"]{
+    margin-right: 5%;
+  }
 .tittle-cd{
     font-size: 24px;
     font-style: normal;
