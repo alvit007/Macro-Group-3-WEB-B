@@ -1,45 +1,66 @@
-// Objek untuk mewakili buku-buku
-const books = [
-    {
-        id: 1,
-        title: "Buku 1",
-        description: "BUKU 1 awdahdwakdbhwadkwa",
-        image: "Rectangle 64.png"
-    },
-    {
-        id: 2,
-        title: "Buku 2",
-        description: "Deskripsi Buku 2. wadhwadwbadadwa",
-        image: "Rectangle 65.png"
-    }
-    // Tambahkan objek buku lainnya di sini
-];
-
-function displayBookDetails(bookId) {
-    const book = books.find(b => b.id === bookId);
-    if (book) {
-        const bookImage = document.getElementById("book-image");
-        const bookTitle = document.getElementById("book-title");
-        const bookDescription = document.getElementById("book-description");
-
-        bookImage.src = book.image;
-        bookTitle.textContent = book.title;
-        bookDescription.textContent = book.description;
-    }
-}
-
-// Event listener untuk menangani klik pada daftar buku
-const bookList = document.getElementById("book-list");
-bookList.addEventListener("click", (event) => {
-    const bookId = parseInt(event.target.getAttribute("data-book-id"));
-    if (!isNaN(bookId)) {
-        window.location.href = `viewBuku.html?bookId=${bookId}`;
-    }
-});
-
-// Memeriksa apakah ada parameter 'bookId' di URL dan menampilkan deskripsi buku sesuai
+// Ambil parameter bookId dari URL
 const urlParams = new URLSearchParams(window.location.search);
-const bookIdParam = urlParams.get("bookId");
-if (bookIdParam) {
-    displayBookDetails(parseInt(bookIdParam));
+const bookId = urlParams.get('bookId');
+
+// Simpan data buku dalam objek
+const books = {
+    1: {
+        image: "Rectangle 64.png",
+        title: "Buku 1",
+        description: 
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+    },
+    2: {
+        image: "Rectangle 65.png",
+        title: "Buku 2",
+        description: 
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    3: {
+        image: "Rectangle 66.png",
+        title: "Buku 3",
+        description: 
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+        
+    },
+    4: {
+        image: "Rectangle 67.png",
+        title: "Buku 4",
+        description: 
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    5: {
+        image: "Rectangle 68.png",
+        title: "Buku 5",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    }
+    // Tambahkan buku-buku lainnya sesuai kebutuhan
+};
+
+// Tampilkan deskripsi buku yang sesuai
+const book = books[bookId];
+if (book) {
+    const bookDetails = document.getElementById("bookDetails");
+    bookDetails.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <h2>${book.title}</h2>
+        <div class="deksripsi">
+            <h3>Deksripsi:</h3>
+            <p>${book.description}</p>
+        </div>
+
+    `;
+} else {
+    // Tampilkan pesan jika buku tidak ditemukan
+    const bookDetails = document.getElementById("bookDetails");
+    bookDetails.innerHTML = "<p>Buku tidak ditemukan.</p>";
 }
