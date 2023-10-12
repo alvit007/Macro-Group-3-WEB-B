@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="icon" href="assets/BitBiteLogo.png">
     <link rel="stylesheet" href="loginstyle.css">
     <title>Login</title>
 </head>
@@ -40,7 +41,7 @@
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
                 <h5><a href="https://www.example.com">Lupa Password ?</a></h5>
-                <button type="submit">Login</button>
+                <button type="button" onclick="login()">Login</button>
                 <div class="horizontal-line"></div>
                 <button class="google"><i class="fab fa-google"></i> Continue with Google</button>
                 <p>Baru mengenal @BitBite ? <a href="https://www.example.com">Ayo Bergabung sekarang</a></p>
@@ -48,7 +49,18 @@
         </div>
         
     </div>
-    
-    
+
+    <script>
+        function login() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (email === "admin@gmail.com" && password === "1234") {
+                window.location.href = "home.html";
+            } else {
+                alert("Login Gagal. Harap periksa kembali email dan password Anda.");
+            }
+        }
+    </script>
 </body>
 </html>
