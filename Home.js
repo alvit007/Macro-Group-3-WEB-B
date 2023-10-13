@@ -22,23 +22,19 @@ function moveSlides() {
 
 moveSlides();
 
-
 const chatPopup = document.getElementById("chat-popup");
 const closeChat = document.getElementById("close-chat");
 const chatMessages = document.getElementById("chat-messages");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
 
-
 function showChat() {
   chatPopup.style.display = "block";
 }
 
-
 function hideChat() {
   chatPopup.style.display = "none";
 }
-
 
 function sendMessage() {
   const userMessage = userInput.value;
@@ -81,7 +77,7 @@ function createTimestamp() {
 //exit chat
 closeChat.addEventListener("click", hideChat);
 
-//tombol 
+//tombol
 const konsultasiButton = document.querySelector(".jadwal a");
 konsultasiButton.addEventListener("click", showChat);
 //judul
@@ -95,4 +91,22 @@ userInput.addEventListener("keydown", (event) => {
     sendMessage();
   }
 });
+
+const items = document.querySelectorAll(".item");
+items.forEach((item) => {
+  item.addEventListener("mouseenter", () => {
+    item.classList.add("active");
+  });
+
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("active");
+  });
+});
+
+function scrollToHome() {
+  const homeElement = document.getElementById('top');
+  if (homeElement) {
+      homeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
