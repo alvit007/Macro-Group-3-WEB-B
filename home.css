@@ -113,7 +113,7 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgb(179, 255, 219);
+  background-color: #B2E4C6;
   margin-right: 2%;
   margin-top: 8%;
   width: 50%;
@@ -122,7 +122,9 @@ a{
   box-shadow: 0.5rem 0.5rem 1rem black;
 }
 .konsultasi .jadwal {
+  font-family: 'inter';
   font-size: 1.5rem;
+  color: #fff;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -156,24 +158,29 @@ a{
 
 .sekilasTentang {
   background-color: rgb(179, 255, 219);
+  font-family: 'Poppins';
+  font-weight: 400;
   text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .kenapaHarus {
   display: flex;
+  font-family: 'Poppins';
+  font-weight: 400;
   flex-direction: row;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .kenapaHarus .left-element {
   width: 48%;
   text-align: center;
+  margin: 0px 2%;
 }
 .kenapaHarus .left-element ul {
   margin-top: 2%;
@@ -184,6 +191,8 @@ a{
 .kenapaHarus .right-element {
   width: 48%;
   text-align: center;
+  text-align: justify;
+  margin: 0px 2%;
 }
 .kenapaHarus .right-element p {
   margin-top: 2%;
@@ -195,6 +204,7 @@ a{
   flex-direction: row;
   justify-content: center;
   background-color: rgb(179, 255, 219);
+  font-family: 'Lato';
 }
 .fitur .item {
   background: white;
@@ -255,11 +265,16 @@ a{
 
 
 .slideshow-container {
+  font-family: 'Lato';
   position: relative;
   max-width: 80%;
   margin: auto;
   overflow: hidden;
   margin-top: 5%;
+}
+
+.slideshow-container h1{
+  font-family: 'Montserrat';
 }
 
 .slide-wrapper {
@@ -291,6 +306,10 @@ a{
   opacity: 50%;
 }
 
+.nav-buttons :hover{
+  color: #F16B4E;
+}
+
 .prev,
 .next {
   padding: 1%;
@@ -301,9 +320,12 @@ a{
 .prev {
   margin-right: 10%;
 }
+
+
 .tabelform {
   text-align: center;
   margin-top: 5%;
+  font-family: 'Montserrat';
 }
 .form {
   display: block;
