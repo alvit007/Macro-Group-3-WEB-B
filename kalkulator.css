@@ -7,6 +7,7 @@ body {
 body {
   width: 100%;
   height: 100vh;
+  font-family: 'Montserrat';
 }
 html{
   scroll-behavior: smooth;
@@ -172,12 +173,15 @@ a{
   text-align: center;
 }
 .isiImage h2{
-  font-size: 2.2rem;
+  font-size: 3rem;
+  font-family: 'Montserrat';
+  font-weight: 800;
 }
 .isiImage p{
   opacity: 80%;
   font-size: 1.5rem;
   padding-top: 2%;
+  font-family: Lato;
 }
 .isiImage a{
   margin-top: 5%;
@@ -249,12 +253,12 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 2% 3%;
+  padding: 4% 20%;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color:rgb(179, 255, 219);
 }
 
 .gender-selection {
