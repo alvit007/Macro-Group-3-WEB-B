@@ -477,7 +477,7 @@ textarea:focus {
 
 .footer ul li p{
   font-size: 14px;
-  padding-left: 23px;
+  padding-left: 5px;
   padding-top: 1%;
 }
 
@@ -498,8 +498,8 @@ textarea:focus {
 }
 
 .logo-ikuti{
-  margin: 4% 0;
-  margin-right: 6%;
+  margin: 4% -15px;
+  padding: 0% -12%;
   flex-direction: row;
   
 }
