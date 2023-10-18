@@ -6,14 +6,14 @@ const bookId = urlParams.get('bookId');
 const books = {
     1: {
         image: "assets/Rectangle-64.png",
-        title: "Buku 1",
+        title: "Ini Buku Diet",
         description: 
         `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
 Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
     },
     2: {
         image: "assets/Rectangle-65.png",
-        title: "Buku 2",
+        title: "Diet Sehat Tanpa Lapar",
         description: 
         `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
         Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
@@ -21,7 +21,7 @@ Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kese
     },
     3: {
         image: "assets/Rectangle-66.png",
-        title: "Buku 3",
+        title: "Diet Puasa",
         description: 
         `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
         Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
@@ -29,7 +29,7 @@ Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kese
     },
     4: {
         image: "assets/Rectangle-67.png",
-        title: "Buku 4",
+        title: "Langsing dan Sehat Bersama Diet Ketogenik",
         description: 
         `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
         Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
@@ -37,12 +37,70 @@ Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kese
     },
     5: {
         image: "assets/Rectangle-68.png",
-        title: "Buku 5",
+        title: "Detoks Sehat Dengan Jus",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    6: {
+        image: "assets/Rectangle-69.png",
+        title: "Diet Intermittent Fasting",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    7: {
+        image: "assets/Rectangle-70.png",
+        title: "Diet Keto Itu Mudah",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    8: {
+        image: "assets/Rectangle-71.png",
+        title: "Diet Sodium",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    9: {
+        image: "assets/Rectangle-74.png",
+        title: "Eating Clean",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    10: {
+        image: "assets/Rectangle-75.png",
+        title: "Detoks Sehat Dengan Jus",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    11: {
+        image: "assets/Rectangle-76.png",
+        title: "Detoks Sehat Dengan Jus",
+        description:
+        `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
+        Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
+
+    },
+    12: {
+        image: "assets/Rectangle-77.png",
+        title: "Detoks Sehat Dengan Jus",
         description:
         `  Memiliki tubuh yang ideal merupakan impian bagi banyak orang. Salah satu cara umumnya untuk mendapatkan tubuh yang sesuai harapan ini dengan berdiet. Sayangnya, banyak masyarakat yang belum memahami makna dan tujuan dari diet itu sendiri. Sebagian dari masyarakat sengaja berdiet hanya demi mendapatkan tubuh yang kurus, sehingga mereka akan mengurangi asupan makanan dengan ketat.
         Sejatinya, tujuan dari diet bukanlah semata demi penampilan, melainkan juga kesehatan. Diet merupakan pengaturan pola makan, baik porsi maupun kandungan gizinya, dengan tujuan untuk menjaga kesehatan dan mendapatkan tubuh yang ideal. `
 
     }
+
+    
     // Tambahkan buku-buku lainnya sesuai kebutuhan
 };
 

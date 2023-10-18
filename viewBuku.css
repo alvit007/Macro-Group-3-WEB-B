@@ -167,8 +167,8 @@ a{
     padding-left: 5%;;
 }
 #bookDetails img{
-  width: 60%;
-  height: 50%;
+  width: 80%;
+  height: 60%;
   box-shadow: 0px 0px 20px rgba(84, 120, 187, 0.5);
 }
 
@@ -182,10 +182,10 @@ a{
 }
 #bookDetails h3{
   padding-top: 5%;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 #bookDetails p{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .rekomBuku {
   margin: 2%;

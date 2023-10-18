@@ -1,6 +1,4 @@
-
-  
-  function showLeftContent() {
+function showLeftContent() {
     const leftContent = document.getElementById('left-content');
     const rightContent = document.getElementById('right-content');
     leftContent.style.display = 'flex';
@@ -21,3 +19,16 @@ function showRightContent() {
     rightContent.classList.remove('fadeOut');
     rightContent.classList.add('fadeIn');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const toggleButtons = document.querySelectorAll(".toggle-dropdown");
+
+  toggleButtons.forEach(button => {
+      button.addEventListener("click", function() {
+          this.classList.toggle("active");
+      });
+  });
+});
+
+
+
