@@ -170,9 +170,19 @@ a{
 #bookDetails img{
   width: 80%;
   height: 60%;
-  box-shadow: 0px 0px 20px rgba(84, 120, 187, 0.5);
+  animation: box-shadow-infinite 3s infinite;
 }
-
+@keyframes box-shadow-infinite {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
 #bookDetails .deksripsi{
   width: 70%;
   margin-top: 15%;

@@ -296,7 +296,9 @@ a{
 .mengapa-pic{
     padding-right: 100px;
 }
-
+.mengapa{
+    padding: 5%;
+}
 /* ========================= FOOTER ========================= */
 .footer {
     color: #525252;

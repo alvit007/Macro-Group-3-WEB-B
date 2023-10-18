@@ -7,18 +7,20 @@ body {
 body {
   width: 100%;
   height: 100vh;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 /* ========================= Header-NAVBAR ========================= */
-header{
+header {
   position: fixed;
-  background: #FFFFFF;
+  background: #ffffff;
   color: #222;
-  font-family: 'Inter',sans-serif; font-size: 20px; 
-  font-style: normal;font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,63 +31,64 @@ header{
   z-index: 1000;
 }
 
-.logo{
+.logo {
   margin-right: auto;
   display: flex;
   padding-left: 20px;
 }
 
-
-.logo-img{
+.logo-img {
   width: 120px;
   height: 120px;
 }
 
-nav ul{
+nav ul {
   display: flex;
   padding-right: 20%;
 }
 
-nav li{
-  list-style-type:none;
+nav li {
+  list-style-type: none;
   padding: 10px;
 }
 
-li a{
+li a {
   transition: all.5s ease 0s;
   display: inline-block;
 }
 
-li a:hover{
-  color: #F16B4E;
+li a:hover {
+  color: #f16b4e;
 }
 
-a{
+a {
   color: #222;
   text-decoration: none;
   margin: 0 20px;
 }
 
-@media screen and (max-width: 812px) { /* jadi kecil 33% */
-  header{font-size: 13px; 
-      height: 100px;
-  }
-  
-  .logo{
-      padding-left: 5px;
+@media screen and (max-width: 812px) {
+  /* jadi kecil 33% */
+  header {
+    font-size: 13px;
+    height: 100px;
   }
 
-  .logo-img{
-      width: 80px; /* Sesuaikan ukuran logo untuk tampilan mobile */
-      height: 80px;
+  .logo {
+    padding-left: 5px;
+  }
+
+  .logo-img {
+    width: 80px; /* Sesuaikan ukuran logo untuk tampilan mobile */
+    height: 80px;
   }
 
   nav {
-      padding-top: 10px; 
+    padding-top: 10px;
   }
 
-  a{
-      margin: 0 10px;
+  a {
+    margin: 0 10px;
   }
 }
 /* ========================= Header-NAVBAR ========================= */
@@ -93,7 +96,7 @@ a{
 /* ========================= FOOTER ========================= */
 .footer {
   color: #525252;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   width: 100%;
   height: auto;
   background-color: rgb(179, 255, 219);
@@ -101,30 +104,30 @@ a{
   flex-direction: row;
   justify-content: center;
 }
-.footer h2{
+.footer h2 {
   font-weight: 1000;
   text-transform: capitalize;
   padding-bottom: 10px;
 }
 
-.footer ul{
+.footer ul {
   padding-bottom: 5px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.footer li{
+.footer li {
   font-size: 18px;
-  list-style-type:none;
+  list-style-type: none;
   padding-bottom: 15px;
 }
 
-.footer p{
+.footer p {
   font-size: 14px;
   text-align: justify;
 }
 
-.footer ul li p{
+.footer ul li p {
   font-size: 14px;
   padding-left: 5px;
   padding-top: 1%;
@@ -139,22 +142,20 @@ a{
   text-align: left;
 }
 
-.third-section{
+.third-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 100%;
 }
 
-.logo-ikuti{
+.logo-ikuti {
   margin: 4% -15px;
   padding: 0% -12%;
   flex-direction: row;
-  
 }
 /* ========================= FOOTER ========================= */
 .imgKalkulator {
-
   background-image: url("kkalori 1.png"); /* Ganti 'background.jpg' dengan URL gambar latar belakang Anda */
   background-position: center;
   background-repeat: no-repeat;
@@ -172,36 +173,36 @@ a{
   align-items: center;
   text-align: center;
 }
-.isiImage h2{
+.isiImage h2 {
   font-size: 3rem;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 800;
 }
-.isiImage p{
+.isiImage p {
   opacity: 80%;
   font-size: 1.5rem;
   padding-top: 2%;
   font-family: Lato;
 }
-.isiImage a{
+.isiImage a {
   margin-top: 5%;
 }
-.tombolBawah img{
+.tombolBawah img {
   animation: kedip 2s infinite;
 }
 
 @keyframes kedip {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   50% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-.tombolBawah{
+.tombolBawah {
   display: flex;
   flex-direction: column;
 }
@@ -217,7 +218,6 @@ a{
 .item {
   flex: 1;
   padding: 5%;
-  
 }
 .left {
   display: flex;
@@ -225,7 +225,7 @@ a{
   justify-content: left;
   font-size: 1.2rem;
 }
-.left h3{
+.left h3 {
   margin-bottom: 5%;
 }
 .right {
@@ -246,7 +246,7 @@ select {
   padding: 2%;
   margin-bottom: 5%;
   border: 1px solid #ccc;
-  background: rgb(179, 255, 219);;
+  background: rgb(179, 255, 219);
 }
 
 button {
@@ -255,33 +255,33 @@ button {
   border: none;
   padding: 4% 20%;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 button:hover {
-  background-color:rgb(179, 255, 219);
+  background-color: rgb(179, 255, 219);
 }
 
 .gender-selection {
   display: flex;
   justify-content: space-between;
   width: calc(80% - 10%);
-
 }
 
 input[type="radio"] {
   margin-right: 10%;
 }
-.rumus{
+.rumus {
   margin-top: 2%;
   background-color: rgb(179, 255, 219);
   padding: 2%;
   border-radius: 1rem;
 }
-.right ul{
+.right ul {
   margin-top: 2%;
   margin-left: 5%;
 }
-.right ul li{
+.right ul li {
   list-style: disc;
 }
 
@@ -292,46 +292,54 @@ input[type="radio"] {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  border-style: dashed;
+  border-style: ridge;
+  border: .25rem solid black;
   padding: 8%;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   z-index: 1000;
   font-size: 1.2rem;
 }
-
+.hasil-popup h2{
+  color: tomato;
+}
+.hasil-popup p{
+  padding-top: 2%;
+}
 .close {
   position: absolute;
   top: 2%;
   right: 2%;
   cursor: pointer;
 }
-    .loading {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-    }
+.loading {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
 
-    .spinner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 4px solid rgba(255, 255, 255, 0.3);
-        border-top: 4px solid #3498db;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        animation: spin 1s linear infinite;
-    }
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
 
-    @keyframes spin {
-        0% { transform: translate(-50%, -50%) rotate(0deg); }
-        100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
