@@ -90,8 +90,6 @@ a{
 /* ========================= Header-NAVBAR ========================= */
 
 /* ========================= Login ========================= */
-/* ... (kode Anda sebelumnya) ... */
-
 .login-container {
     display: flex;
     margin: 20px auto;
@@ -99,7 +97,7 @@ a{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 860px;
-    height: 430px;
+    height: 550px;
 }
 
 .login-content {
